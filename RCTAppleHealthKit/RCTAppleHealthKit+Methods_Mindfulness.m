@@ -45,7 +45,7 @@
     if ([self.healthStore authorizationStatusForType:[HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierMindfulSession]] == HKAuthorizationStatusSharingAuthorized) {
         isAuthorized = YES;
     }
-    callback(@[@(isAuthorized)]);
+    callback(@[[NSNull null], @(isAuthorized)]);
 }
 
 
