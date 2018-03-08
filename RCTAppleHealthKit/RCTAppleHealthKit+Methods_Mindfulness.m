@@ -38,5 +38,15 @@
 
 }
 
+- (void)mindfulness_hasWritePermission:(RCTResponseSenderBlock)callback
+{
+    
+    BOOL isAuthorized = NO;
+    if ([self.healthStore authorizationStatusForType:[HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierMindfulSession]] == HKAuthorizationStatusSharingAuthorized) {
+        isAuthorized = YES;
+    }
+    callback(@[@(isAuthorized)]);
+}
+
 
 @end
