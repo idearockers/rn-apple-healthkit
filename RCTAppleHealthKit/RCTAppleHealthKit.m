@@ -189,7 +189,7 @@ RCT_EXPORT_METHOD(saveMindfulSession:(NSDictionary *)input callback:(RCTResponse
 
 RCT_EXPORT_METHOD(hasMindfulSessionWritePermission:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
-    [self mindfulness_hasWritePermission:input callback:callback];
+    [self mindfulness_hasWritePermission:callback];
 }
 
 
